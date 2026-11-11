@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <button id="new-chat" type="button">New conversation</button>
+      </div>
+      <div class="sidebar-section-label">Recent</div>
+      <ul id="conversation-list"></ul>
+      <footer class="sidebar-footer">
+        <span id="backend-badge"></span>
+      </footer>
+    </aside>
+
+    <main>
+      <header id="main-header">
+        <h1 id="conversation-title">New conversation</h1>
+      </header>
+
+      <section id="messages" aria-live="polite"></section>
+
+      <form id="composer">
+        <textarea
+          id="input"
+          rows="1"
+          placeholder="Ask anything…"
+          maxlength="8000"
+          autofocus
+        ></textarea>
+        <button id="send" type="submit" aria-label="Send">Send</button>
+      </form>
+
+      <div id="status-bar"></div>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

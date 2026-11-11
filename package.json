@@ -1,0 +1,33 @@
+{
+  "name": "binary-chat-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chat agent with web search and dated hybrid memory. Submission for Binary.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "seed": "tsx scripts/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "@huggingface/transformers": "^3.5.1",
+    "better-sqlite3": "^11.7.0",
+    "dompurify": "^3.2.3",
+    "hono": "^4.6.14",
+    "marked": "^15.0.6",
+    "sqlite-vec": "^0.1.7-alpha.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
